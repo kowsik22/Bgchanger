@@ -1,0 +1,40 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="s.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+    <div>
+        <button id="btn">Click Me</button>
+    </div>
+   
+    <script>
+        let btn=document.getElementById('btn');
+        let isBlack= false;
+        btn.addEventListener('click',()=>{
+            if (isBlack) {
+                document.body.style.backgroundColor = '#e8e8e8'; 
+                btn.style.backgroundColor= 'black';
+                btn.style.color='white';
+            } else {
+                document.body.style.backgroundColor = 'black';
+                btn.style.backgroundColor= 'white';
+                btn.style.color='black';
+            }
+            isBlack = !isBlack; // Toggle the state
+        })
+    </script>
+</body>
+</html>
